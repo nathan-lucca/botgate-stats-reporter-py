@@ -5,6 +5,6 @@ try:
 
     __version__ = version("botgate-stats-reporter-py")
 except Exception:
-    __version__ = "1.0.1"
+    __version__ = "1.0.3"
 
 __all__ = ["BotGateReporter"]
