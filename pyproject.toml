@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "botgate-stats-reporter-py"
+version = "1.0.1"
+description = "Official BotGate module for reporting Discord bot stats automatically"
+readme = "README.md"
+authors = [
+    { name = "BotGate Team", email = "botgateoficial@gmail.com" }
+]
+license = { text = "MIT" }
+keywords = ["discord", "bot", "botgate", "stats", "statistics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "aiohttp>=3.9.0",
+    "discord.py>=2.3.0",
+]
+
+[project.urls]
+Homepage = "https://docs-botgate.vercel.app/"
+Issues = "https://github.com/nathan-lucca/botgate-stats-reporter-py/issues"
