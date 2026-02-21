@@ -5,8 +5,12 @@ from aiohttp import web
 from typing import Optional, Dict, Any, List, Callable
 from discord.ext import tasks
 import time
+from . import __version__
+import os
 
 logger = logging.getLogger("botgate_reporter")
+
+DEFAULT_API_URL = "https://api.botgate.coden8n.shop"
 
 STRINGS = {
     "pt-BR": {
@@ -64,7 +68,7 @@ class BotGateReporter:
         auto_config: bool = True,
         debug: bool = False,
         lang: str = "pt-BR",
-        api_url: str = "https://botgate-api-987684559046.us-central1.run.app",
+        api_url: Optional[str] = None,
     ):
         self.bot_id = bot_id
         self.api_key = api_key
@@ -73,7 +77,7 @@ class BotGateReporter:
         self.auto_config = auto_config
         self.debug = debug
         self.lang = lang if lang in STRINGS else "pt-BR"
-        self.api_url = api_url
+        self.api_url = api_url or os.environ.get("BOTGATE_API_URL") or DEFAULT_API_URL
 
         self.client = None
         self.current_tier = ""
@@ -119,7 +123,7 @@ class BotGateReporter:
         return {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "User-Agent": f"BotGate-Stats-Reporter-Py/1.0.0 (Bot: {self.bot_id})",
+            "User-Agent": f"BotGate-Stats-Reporter-Py/{__version__} (Bot: {self.bot_id})",
         }
 
     async def _ensure_session(self):
