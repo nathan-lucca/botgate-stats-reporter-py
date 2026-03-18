@@ -10,7 +10,7 @@ import os
 
 logger = logging.getLogger("botgate_reporter")
 
-DEFAULT_API_URL = "https://api.botgate.coden8n.shop"
+DEFAULT_API_URL = "https://api-bot.botgate.com.br"
 
 STRINGS = {
     "pt-BR": {
