@@ -23,5 +23,5 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://docs-botgate.vercel.app/"
+Homepage = "https://docs.botgate.com.br/"
 Issues = "https://github.com/nathan-lucca/botgate-stats-reporter-py/issues"

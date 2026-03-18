@@ -99,7 +99,7 @@ O `botgate-stats-reporter-py` é reativo. Se você fizer um upgrade de plano no 
 
 ## 🔗 Links Úteis
 
-- [Documentação Oficial](https://docs-botgate.vercel.app/)
+- [Documentação Oficial](https://docs.botgate.com.br/)
 - [Painel do Desenvolvedor](https://www.botgate.com.br/settings)
 - [Suporte no Discord](https://www.discord.gg/xK4r9HqKKf)
 
